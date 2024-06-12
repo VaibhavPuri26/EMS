@@ -3,43 +3,39 @@ const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const colors = require("colors");
+const path = require("path");
 const connectDb = require("./config/connectDb");
-
 // config dot env file
 dotenv.config();
 
-// database call
+//databse call
 connectDb();
 
-// rest object
+//rest object
 const app = express();
 
-// middlewares
+//middlewares
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 
-// routes
-// user routes
+//routes
+//user routes
 app.use("/api/v1/users", require("./routes/userRoute"));
-// transactions routes
+//transactions routes
 app.use("/api/v1/transactions", require("./routes/transactionroutes"));
 
-// port
-const PORT = process.env.PORT || 8080;
+//static files
+app.use(express.static(path.join(__dirname, "./client/build")));
 
-// listen server
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+//port
+const PORT = 8080 || process.env.PORT;
+
+//listen server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`.cyan.bold);
-});
-
-// Error handling
-process.on('unhandledRejection', (err, promise) => {
-  console.log(`Logged Error: ${err.message}`.red);
-  server.close(() => process.exit(1));
-});
-
-process.on('uncaughtException', (err) => {
-  console.log(`Uncaught Exception: ${err.message}`.red);
-  server.close(() => process.exit(1));
+  console.log(`Server running on port ${PORT}`);
 });
