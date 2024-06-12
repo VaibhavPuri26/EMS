@@ -1,41 +1,56 @@
 .login-page {
-    height: 100vh !important;
-    width: 100vw !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.login-form {
+  background-color: #b9bcccb6;
+  padding: 30px;
+  max-width: 400px; /* Add a max-width for better responsiveness */
+  width: 100%; /* Make it take full width on smaller screens */
+}
+
+.login-form h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 30px;
+  color: #344265;
+}
+
+.login-form .ant-form-item-label label {
+  color: #344265 !important;
+}
+
+.login-form button {
+  background-color: #344265;
+  color: white;
+  outline: none;
+}
+
+.login-form button:hover {
+  background-color: black;
+  color: white;
+}
+
+.login-form a {
+  color: #344265 !important;
+}
+
+.login-form a:hover {
+  color: black !important;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 767.98px) {
+  .login-page {
+      padding: 20px; /* Add padding on smaller screens */
   }
- 
+
   .login-form {
-    background-color: #b9bcccb6;
-    margin-left: -15px;
-    padding: 30px;
+      margin-left: 0; /* Remove negative margin on smaller screens */
   }
-  
-  .login-form h1 {
-    text-align: center;
-    font-weight: bold;
-    margin: 30px;
-    color: #344265;
-  }
-  
-  .login-form .ant-form-item-label label {
-    color: #344265 !important;
-  }
-  .login-form button {
-    background-color: #344265;
-    color: white;
-    outline: none;
-  }
-  .login-form button:hover {
-    background-color: black;
-    color: white;
-  }
-  .login-form a {
-    color: #344265 !important;
-  }
-  
-  .login-form a:hover {
-    color: black !important;
-  }
+}
