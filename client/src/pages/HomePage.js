@@ -75,7 +75,7 @@ const HomePage = () => {
       try {
         const user = JSON.parse(localStorage.getItem("user"));
         setLoading(true);
-        const res = await axios.post("/transactions/get-transactions", {
+        const res = await axios.post("/transactions/get-transaction", {
           userid: user._id,
           frequency,
           selectedDate,
@@ -84,7 +84,7 @@ const HomePage = () => {
         setAllTransaction(res.data);
         setLoading(false);
       } catch (error) {
-        message.error("Fetch Issue With Transaction");
+        message.error("Fetch Issue With Tranction");
       }
     };
     getAllTransactions();
