@@ -17,7 +17,7 @@ const getAllTransaction = async (req, res) => {
              },
            }),
       userid: req.body.userid,
-      //...(type !== "all" && { type }),
+      ...(type !== "all" && { type }),
     });
     res.status(200).json(transactions);
   } catch (error) {
