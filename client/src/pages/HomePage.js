@@ -94,7 +94,7 @@ const HomePage = () => {
   const handleDelete = async (record) => {
     try {
       setLoading(true);
-      await axios.post("/transections/delete-transection", {
+      await axios.post("/transactions/delete-transaction", {
         transacationId: record._id,
       });
       setLoading(false);
@@ -122,7 +122,7 @@ const HomePage = () => {
         setLoading(false);
         message.success("Transaction Updated Successfully");
       } else {
-        await axios.post("/transactions/add-transection", {
+        await axios.post("/transactions/add-transaction", {
           ...values,
           userid: user._id,
         });
