@@ -76,10 +76,7 @@ const HomePage = () => {
         const user = JSON.parse(localStorage.getItem("user"));
         setLoading(true);
         const res = await axios.post("/transactions/get-transaction", {
-          userid: user._id,
-          frequency,
-          selectedDate,
-          type,
+          userid: user._id
         });
         setAllTransaction(res.data);
         setLoading(false);
@@ -97,6 +94,7 @@ const HomePage = () => {
       await axios.post("/transactions/delete-transaction", {
         transacationId: record._id,
       });
+      console.log('fl');
       setLoading(false);
       message.success("Transaction Deleted!");
     } catch (error) {
