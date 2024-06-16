@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm start\" \"npm run client\" "
   },
   "keywords": [],
-  "author": "Techinfoyt",
+  "author": "Vaibhav Puri",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
