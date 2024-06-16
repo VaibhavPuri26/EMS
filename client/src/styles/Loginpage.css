@@ -1,86 +1,116 @@
-
-
 .login-page {
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #c6db0d, #5494a4); 
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 20px; /* Add padding for better spacing on smaller screens */
+  position: relative;
+  background-color: cadetblue;
 }
 
 .login-form {
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
-  padding: 30px;
-  border-radius: 8px; /* Rounded corners */
-  max-width: 400px; /* Add a max-width for better responsiveness */
-  width: 100%; /* Make it take full width on smaller screens */
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px; /* Add shadow for depth */
+  width: 450px;
+  min-height: 500px;
+  height: auto;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
 }
 
 .login-form h1 {
+  font-size: 250%;
+  font-family: 'Playfair Display', serif;
+  color: #4070f4; /* Changed color to blue */
   text-align: center;
-  font-weight: bold;
-  margin-bottom: 30px; /* Reduce margin for better spacing */
-  color: #344265;
-  font-size: 24px; /* Adjust font size for better readability */
+  margin: 2% auto 10% auto;
 }
 
-.login-form .ant-form-item-label label {
-  color: #344265 !important;
+.login-form .con {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
-.login-form button {
-  background-color: #344265;
-  color: white;
-  border: none; /* Remove border */
-  padding: 10px 20px; /* Add padding for better button size */
-  font-size: 16px; /* Adjust font size for better readability */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Change cursor to pointer */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+.input-item {
+  width: 100%;
+  text-align: center; /* Center the text inside the input items */
+  margin-bottom: 10px; /* Add some margin between input items */
 }
 
-.login-form button:hover {
-  background-color: #2a2d45; /* Slightly lighter hover color */
-  color: white;
+.input-item button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.login-form a {
-  color: #344265 !important;
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s; /* Smooth transition for hover effect */
+.input-item input {
+  height: 60px; /* Increased height */
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 20px; /* Increased font size */
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
-.login-form a:hover {
-  color: #2a2d45 !important; /* Slightly lighter hover color */
+.input-item input:focus,
+.input-item input:valid {
+  border-color: #4070f4;
 }
 
-/* Media queries for responsive design */
-@media (max-width: 767.98px) {
-  .login-form {
-    margin-left: 0; /* Remove negative margin on smaller screens */
+#eye {
+  background: #fff;
+  color: #333;
+  margin: 5.9px 0 0 0;
+  margin-left: -20px;
+  padding: 15px 9px 19px 0px;
+  border-radius: 0px 5px 5px 0px;
+  float: right;
+  position: relative;
+  right: 1%;
+  top: -.2%;
+  z-index: 5;
+  cursor: pointer;
+}
+
+button {
+  display: inline-block;
+  color: #252537;
+  width: 280px;
+  height: 50px;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+}
+
+button:hover {
+  transform: translatey(3px);
+  box-shadow: none;
+}
+
+button:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes ani9 {
+  0% {
+      transform: translateY(3px);
   }
-
-  .login-form h1 {
-    font-size: 20px; /* Adjust font size for smaller screens */
-  }
-
-  .login-form button {
-    width: 100%; /* Make button take full width on smaller screens */
-  }
-
-  .login-form .d-flex {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-    align-items: flex-start; /* Align items to the start */
-  }
-
-  .login-form .d-flex a,
-  .login-form .d-flex button {
-    width: 100%; /* Make links and buttons take full width */
-    text-align: center; /* Center text */
-    margin-bottom: 10px; /* Add margin for better spacing */
+  100% {
+      transform: translateY(5px);
   }
 }

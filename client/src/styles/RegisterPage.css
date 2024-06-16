@@ -3,26 +3,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  background-image: linear-gradient(to right, #cfd9df, #e2ebf0); /* Soft gradient */
+
+
 }
 
 .register-form {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 20px;
-  max-width: 500px; /* Add a max-width for better responsiveness */
-  width: 100%; /* Make it take full width on smaller screens */
+  max-width: 430px; /* Adjusted max-width to match the design */
+  width: 100%;
 }
 
 .register-form h2 {
   margin-top: 10px;
   text-align: center;
   font-weight: bold;
-  color: #b87333;
+  color: #4070f4; /* Changed color to match the design */
 }
 
 .register-form a {
-  color: #b87333 !important;
+  color: #4070f4 !important; /* Changed color to match the design */
 }
 
 .register-form a:hover {
@@ -30,13 +32,13 @@
 }
 
 .register-form button {
-  background-color: #b87333;
+  background-color: #4070f4; /* Changed background color to match the design */
   color: white;
 }
 
 .register-form input:focus {
-  border: 1px solid #b87333 !important;
-  color: #b87333;
+  border: 1px solid #4070f4 !important; /* Changed border color to match the design */
+  color: #4070f4;
 }
 
 .register-form button:hover {
